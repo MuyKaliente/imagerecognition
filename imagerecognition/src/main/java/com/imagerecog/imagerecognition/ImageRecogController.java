@@ -6,10 +6,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ImageRecogController {
 	
-	@GetMapping("/")
-	public String imageRecognizer()
+	@GetMapping("/classify")
+	public String imageRecognizerClassify()
 	{
 		return "Cat or Dog";
 	}
+	
+	@GetMapping("/")
+	public String imageRecognizer()
+	{
+		return "Welcome to Kalyan's Image Classifier";
+	}
+	
 	
 }
